@@ -1,4 +1,4 @@
-class Api::V1::SpaceStationsControler < Api::V1::ApplicationController
+class Api::V1::SpaceStationsController < Api::V1::ApplicationController
   before_action :doorkeeper_authorize!
   before_action :set_space_stations, only: [:index]
 
