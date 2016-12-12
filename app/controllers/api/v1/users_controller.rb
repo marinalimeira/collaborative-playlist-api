@@ -1,4 +1,10 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
+  before_action :doorkeeper_authorize!, only: [:me]
+
+  def me
+    render json: current_user, status: :ok
+  end
+
   def create
     user_service = Services::User::Create.new create_params
     if user_service.call
