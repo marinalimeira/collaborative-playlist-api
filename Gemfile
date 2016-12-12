@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'doorkeeper'
+gem 'active_model_serializers'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'byebug', platform: :mri
