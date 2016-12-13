@@ -6,7 +6,6 @@ class Video < ApplicationRecord
   private
 
   def fix_url
-    pry
     self.url = url.gsub "watch?v=", "embed/"
   end
 end
