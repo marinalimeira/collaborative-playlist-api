@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe Api::V1::SpaceStationsController, type: :controller do
+describe Api::V1::VideosController, type: :controller do
   context "#index" do
     let(:user) { create :user }
-    let!(:space_stations) { create_list :space_station, 3, user: user }
+    let!(:videos) { create_list :video, 3, user: user }
     let(:token) { double acceptable?: true, resource_owner_id: user.id }
 
     before do

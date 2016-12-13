@@ -2,16 +2,17 @@ require 'rails_helper'
 
 describe Api::V1::UsersController, type: :controller do
   describe "#create" do
+    let(:user) { build :user, params }
+
+    describe "valid params" do
     let(:params) do
-      { 
+      {
         name: "Leia Skywalker",
-        email: "leia@rebelalliance.com", 
+        email: "leia@rebelalliance.com",
         password: "hansolo",
         password_confirmation: "hansolo"
       }
     end
-
-    let(:user) { build :user, params }
 
     before do
       allow_any_instance_of(Services::User::Create).to receive(:call).and_return true
@@ -31,4 +32,9 @@ describe Api::V1::UsersController, type: :controller do
       it { expect(response.status).to eq 200 }
     end
   end
+    describe "invalid params" do
+
+    end
+  end
+
 end

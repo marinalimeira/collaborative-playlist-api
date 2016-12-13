@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :space_station do
-    name  "Death Star"
+  factory :video do
+    url   "http://www.google.com"
     user  { build :user }
   end
 end

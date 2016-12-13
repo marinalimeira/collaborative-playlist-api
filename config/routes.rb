@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :users do
+      resource :users, only: [:create] do
         get :me
       end
 
-      resources :space_stations
+      resources :videos, only: [:create, :index]
     end
   end
 end
