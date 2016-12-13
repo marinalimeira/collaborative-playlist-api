@@ -7,7 +7,7 @@ class Services::Video::Create
   end
 
   def call
-    @video = Video.new(user: @user, @params)
+    @video = ::Video.new user: @user, url: @params["url"]
 
     if @video.valid?
       @video.save
