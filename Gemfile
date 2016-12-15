@@ -16,7 +16,6 @@ gem 'active_model_serializers'
 gem 'rack-cors'
 
 group :production do
-  gem 'pg'
 end
 
 group :development, :test do
